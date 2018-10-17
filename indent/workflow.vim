@@ -4,8 +4,6 @@ endif
 
 let b:did_indent = 1
 
-setlocal cindent
-setlocal cinkeys-=0#
-
+setlocal autoindent
 setlocal tabstop=2
 setlocal shiftwidth=2
