@@ -9,8 +9,8 @@ highlight link workflowEquals Operator
 
 
 " string
-syntax match workflowString "'[^\']*'"
-syntax match workflowString '"[^\"]*"'
+syntax match workflowString "'.*'"
+syntax match workflowString '".*"'
 
 highlight link workflowString String
 
