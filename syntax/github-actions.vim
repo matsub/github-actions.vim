@@ -8,8 +8,7 @@ highlight link GithubActionsEquals Operator
 
 
 " string
-syntax match GithubActionsString "'\(.\{-}\\'\)*.\{-}'"
-syntax match GithubActionsString '"\(.\{-}\\"\)*.\{-}"'
+syntax region GithubActionsString start=/"/ skip=/\\"/ end=/"/
 highlight link GithubActionsString String
 
 
