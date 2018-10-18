@@ -4,20 +4,17 @@ endif
 
 " operators
 syntax match GithubActionsEquals '='
-
 highlight link GithubActionsEquals Operator
 
 
 " string
-syntax match GithubActionsString "'.*'"
-syntax match GithubActionsString '".*"'
-
+syntax match GithubActionsString "'\(.\{-}\\'\)*.\{-}'"
+syntax match GithubActionsString '"\(.\{-}\\"\)*.\{-}"'
 highlight link GithubActionsString String
 
 
 "" comment
 syntax region GithubActionsComment display oneline start='\%\(^\|\s\)#' end='$'
-
 highlight link GithubActionsComment Comment
 
 
@@ -66,7 +63,6 @@ syntax keyword GithubActionsEventKeywords
             \ release
             \ status
             \ watch
-
 highlight link GithubActionsRootKeywords Statement
 highlight link GithubActionsWorkflowKeywords Type
 highlight link GithubActionsActionKeywords Type
