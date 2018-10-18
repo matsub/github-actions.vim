@@ -3,42 +3,42 @@ if exists("b:current_syntax")
 endif
 
 " operators
-syntax match workflowEquals '='
+syntax match GithubActionsEquals '='
 
-highlight link workflowEquals Operator
+highlight link GithubActionsEquals Operator
 
 
 " string
-syntax match workflowString "'.*'"
-syntax match workflowString '".*"'
+syntax match GithubActionsString "'.*'"
+syntax match GithubActionsString '".*"'
 
-highlight link workflowString String
+highlight link GithubActionsString String
 
 
 "" comment
-syntax region workflowComment display oneline start='\%\(^\|\s\)#' end='$'
+syntax region GithubActionsComment display oneline start='\%\(^\|\s\)#' end='$'
 
-highlight link workflowComment Comment
+highlight link GithubActionsComment Comment
 
 
 " keywords
-syntax keyword workflowRootKeywords
+syntax keyword GithubActionsRootKeywords
             \ workflow
             \ action
-            \ nextgroup=workflowString skipwhite
-syntax keyword workflowWorkflowKeywords
+            \ nextgroup=GithubActionsString skipwhite
+syntax keyword GithubActionsWorkflowKeywords
             \ on
             \ resolves
-            \ nextgroup=workflowEquals skipwhite
-syntax keyword workflowActionKeywords
+            \ nextgroup=GithubActionsEquals skipwhite
+syntax keyword GithubActionsActionKeywords
             \ needs
             \ uses
             \ runs
             \ args
             \ env
             \ secrets
-            \ nextgroup=workflowEquals skipwhite
-syntax keyword workflowEventKeywords
+            \ nextgroup=GithubActionsEquals skipwhite
+syntax keyword GithubActionsEventKeywords
             \ check_run
             \ check_suite
             \ commit_comment
@@ -67,9 +67,9 @@ syntax keyword workflowEventKeywords
             \ status
             \ watch
 
-highlight link workflowRootKeywords Statement
-highlight link workflowWorkflowKeywords Type
-highlight link workflowActionKeywords Type
-highlight link workflowEventKeywords Type
+highlight link GithubActionsRootKeywords Statement
+highlight link GithubActionsWorkflowKeywords Type
+highlight link GithubActionsActionKeywords Type
+highlight link GithubActionsEventKeywords Type
 
-let b:current_syntax = "workflow"
+let b:current_syntax = "GithubActions"
